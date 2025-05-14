@@ -7,16 +7,179 @@
 
 /* Root */
 :root {
+    /* Explicit rem declaration */
+    font-size: 16px;
 
+    /* Colors */
+    --color-primary: #4e3969;
+    --color-primary-lighter: #7c69a4; 
+
+    --color-seconday: #ff9614;
+
+    --color-light: #999999;
+    --color-lighter: #f6f5f3;
+
+    /* Variables */
+    --text-align--page-title: center;
+    --display--recipe-specification: none;
+    --display--advertising-banner: none;
 }
 
-/* Utilities */
+/* #region Utilities */
 
+    /* #region Layout */
 
-/* Generals */
+        /* Containers */
+        .container {
 
+        }
+
+    /* #endregion Layout */
+
+    /* #region Spacing */
+
+        /* #region Padding */
+
+            /* Padding 1rem */
+            .p-1 {
+                padding: 1rem;
+            }
+
+        /* #endregion Padding */
+
+    /* #endregion Spacing */
+
+    /* #region Typography */
+
+        /* Text decoration line none */
+        .text-decoration-none {
+            text-decoration-line: none;
+        }
+
+        /* Text uppercase */
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+    /* #endregion Typography */
+
+    /* #region Colors */
+
+        /* #region Background colors */
+
+            /* Background color primary */
+            .bg-primary {
+                background-color: var(--color-primary-lighter);
+            }
+
+            /* Background color light */
+            .bg-light {
+                background-color: var(--color-lighter);
+            }
+
+        /* #endregion Background colors */
+
+        /* #region Text colors */
+
+            /* Text color primary */
+            .text-primary {
+                color: var(--color-primary);
+            }
+
+            /* Text color secondary */
+            .text-secondary {
+                color: var(--color-seconday);
+            }
+
+            /* Text color light */
+            .text-light {
+                color: var(--color-light);
+            }
+
+            .text-shadow {
+                text-shadow: 2px 2px 2px var(--color-light);
+            }
+
+        /* #endregion Text colors */
+
+    /* #endregion Colors */
+
+/* #endregion Utilities */
+
+/* #region Generals */
+img {
+    width: 100%;
+}
+/* #endregion Generals */
+
+/* #region Page related */
 html {
     body {
-        
+
+        /* #region Page header */
+        .page-header {
+            .home-link {
+                .page-title {
+                    text-align: var(--text-align--page-title);
+                    font-family: 'Nerko One', cursive;
+                    font-size: 5rem;
+                }
+            }
+        }
+        /* #endregion Page header */
+
+        /* #region Page main */
+        .page-main {
+            .recipe {
+                .recipe-category {
+
+                }
+                .recipe-title {
+                    .recipe-title-specification {
+                        display: var(--display--recipe-specification);
+                    }
+                }
+                .recipe-header {
+
+                }
+                .recipe-banner {
+                    display: var(--display--advertising-banner);
+                }
+            }
+        }
+        /* #endregion Page main */
+
+        /* #region Page footer */
+        .page-footer {
+
+        }
+        /* #endregion Page footer */
     }
 }
+
+/* #region Responsive */
+
+/* Tablet */
+@media screen and (min-width: 769px) {
+
+    /* Changes */
+    :root {
+        --text-align--page-title: left;
+        --display--recipe-specification: inline;
+        --display--advertising-banner: block;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 993px) {
+
+    /* Changes */
+    :root {
+        
+    }
+
+}
+/* #endregion Responsive */
+
+/* #endregion Page related */
