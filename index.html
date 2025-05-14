@@ -9,10 +9,15 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Nerko One font embedding -->
+    <!-- "Nerko One" font linking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <!-- "Font Awesome" font linking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Stylesheet linking -->
     <link rel="stylesheet" href="./css/style.css">
@@ -41,19 +46,110 @@
     <main class="page-main">
 
         <!-- #region Recipe section -->
-        <section class="recipe bg-light">
+        <section class="recipe bg-light p-2">
 
             <!-- Recipe category -->
             <span class="recipe-category text-uppercase text-light">Dolci e desserts</span>
 
             <!-- Recipe title -->
-            <h2 class="recipe-title text-primary">Tiramisù
+            <h2 class="recipe-title py-1 text-primary">Tiramisù
                 <!-- Recipe title specification -->
                 <span class="recipe-title-specification"> (Dolce Tradizionale)</span>
             </h2>
 
             <!-- #region Recipe header -->
             <header class="recipe-header">
+
+                <!-- Recipe video embedding -->
+                <iframe class="recipe-video" src="https://www.youtube.com/embed/JVT900H6s0g?si=PtdAVcdbPSrktesz"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+
+                <!-- #region Recipe information section -->
+                <section class="recipe-information p-1 bg-white">
+
+                    <!-- Recipe information section title -->
+                    <h3 class="information-section-title">In breve</h3>
+
+                    <!-- Recipe information list -->
+                    <ul class="recipe-information-list py-1">
+                        <li>
+                            <span>Difficoltà: </span>
+                            <b>Facile</b>
+                        </li>
+                        <li>
+                            <span>Tempo: </span>
+                            <b>40 min</b>
+                        </li>
+                        <li>
+
+                            <span>Porzione per: </span>
+                            <b>8 persone</b>
+                        </li>
+                        <li>
+                            <span>Costo: </span>
+                            <b>contenuto</b>
+                        </li>
+                        <li>
+                            <b>Note</b>
+                            <span>: +2 ore di riposo in frigo</span>
+                        </li>
+                    </ul>
+
+                </section>
+                <!-- #endregion Recipe summary section -->
+
+                <!-- Recipe share links bar -->
+                <nav class="recipe-share py-1">
+
+                    <!-- Social links list -->
+                    <ul class="social-list d-flex">
+
+                        <!-- Facebook -->
+                        <li class="social-item">
+                            <a class="social-link text-decoration-none" href="#">
+                                <i class="social-icon fa-brands fa-facebook"></i>
+                                <span class="social-name text-uppercase">Facebook</span>
+                            </a>
+                        </li>
+
+                        <!-- Twitter -->
+                        <li class="social-item">
+                            <a class="social-link text-decoration-none" href="#">
+                                <i class="social-icon fa-brands fa-twitter"></i>
+                                <span class="social-name text-uppercase">Twitter</span>
+                            </a>
+                        </li>
+
+                        <!-- Instagram -->
+                        <li class="social-item">
+                            <a class="social-link text-decoration-none" href="#">
+                                <i class="social-icon fa-brands fa-instagram"></i>
+                                <span class="social-name text-uppercase">Instagram</span>
+                            </a>
+                        </li>
+
+                        <!-- Pinterest -->
+                        <li class="social-item">
+                            <a class="social-link text-decoration-none" href="#">
+                                <i class="social-icon fa-brands fa-pinterest"></i>
+                                <span class="social-name text-uppercase">Pinterest</span>
+                            </a>
+                        </li>
+
+                        <!-- YouTube -->
+                        <li class="social-item">
+                            <a class="social-link text-decoration-none" href="#">
+                                <i class="social-icon fa-brands fa-youtube"></i>
+                                <span class="social-name text-uppercase">YouTube</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
 
             </header>
             <!-- #endregion Recipe header -->
@@ -65,7 +161,7 @@
                 <a class="banner-link" href="#" target="_blank">
 
                     <!-- Advertising banner image -->
-                    <img class="banner-image" src="./img/banner.png" alt="Giallo Booleano cooking classes">
+                    <img class="banner-image py-1" src="./img/banner.png" alt="Giallo Booleano cooking classes">
 
                 </a>
 
@@ -82,7 +178,7 @@
                 <hr>
 
                 <!-- Recipe image -->
-                <img class="presentation-image" src="./img/tiramisu.jpg" alt="Tiramisù">
+                <img class="presentation-image mb-0-5" src="./img/tiramisu.jpg" alt="Tiramisù">
 
                 <!-- Recipe presentation -->
                 <p class="presentation-text">
