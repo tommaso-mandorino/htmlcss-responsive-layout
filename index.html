@@ -7,23 +7,47 @@
     <meta charset="UTF-8">
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- "Nerko One" font linking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- #region Fonts linking -->
 
-    <!-- "Font Awesome" font linking -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- #region Google fonts linking -->
+
+            <!-- General Google font linking -->
+            <link rel="preconnect"
+                  href="https://fonts.googleapis.com">
+
+            <link rel="preconnect"
+                  href="https://fonts.gstatic.com"
+                  crossorigin>
+
+            <!-- "Nerko One" font linking -->
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap">
+
+            <!-- "Montserrat" font linking -->
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+        <!-- #endregion Google fonts linking -->
+
+        <!-- "Font Awesome" font linking -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+              integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer">
+
+    <!-- #endregion Fonts linking -->
 
     <!-- Stylesheet linking -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+          href="./css/style.css">
 
     <!-- Page title -->
     <title>Giallo Booleano</title>
+
 </head>
 
 <body>
@@ -35,7 +59,7 @@
         <a class="home-link text-decoration-none" href="./">
 
             <!-- Page title -->
-            <h1 class="page-title text-uppercase text-secondary text-shadow">Giallo Booleano</h1>
+            <h1 class="page-title d-inline fw-normal text-uppercase font-family-nerko-one fs-4 text-secondary text-shadow">Giallo Booleano</h1>
 
         </a>
 
@@ -43,10 +67,10 @@
     <!-- #endregion Page header -->
 
     <!-- #region Page main -->
-    <main class="page-main">
+    <main class="page-main bg-light">
 
         <!-- #region Recipe section -->
-        <section class="recipe bg-light p-2">
+        <section class="recipe container">
 
             <!-- Recipe category -->
             <span class="recipe-category text-uppercase text-light">Dolci e desserts</span>
@@ -60,56 +84,65 @@
             <!-- #region Recipe header -->
             <header class="recipe-header">
 
-                <!-- Recipe video embedding -->
-                <iframe class="recipe-video" src="https://www.youtube.com/embed/JVT900H6s0g?si=PtdAVcdbPSrktesz"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-
                 <!-- #region Recipe information section -->
-                <section class="recipe-information p-1 bg-white">
+                <div class="recipe-information d-flex flex-wrap">
 
-                    <!-- Recipe information section title -->
-                    <h3 class="information-section-title">In breve</h3>
+                    <!-- Recipe infomation video -->
+                    <iframe class="information-video ratio-16x9"
+                            src="https://www.youtube.com/embed/JVT900H6s0g?si=PtdAVcdbPSrktesz"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
 
-                    <!-- Recipe information list -->
-                    <ul class="recipe-information-list py-1">
-                        <li>
-                            <span>Difficoltà: </span>
-                            <b>Facile</b>
-                        </li>
-                        <li>
-                            <span>Tempo: </span>
-                            <b>40 min</b>
-                        </li>
-                        <li>
+                    <!-- #region Recipe information text -->
+                    <section class="information-text p-2 bg-white">
 
-                            <span>Porzione per: </span>
-                            <b>8 persone</b>
-                        </li>
-                        <li>
-                            <span>Costo: </span>
-                            <b>contenuto</b>
-                        </li>
-                        <li>
-                            <b>Note</b>
-                            <span>: +2 ore di riposo in frigo</span>
-                        </li>
-                    </ul>
+                        <!-- Recipe information text title -->
+                        <h3 class="information-text-title py-1">In breve</h3>
 
-                </section>
-                <!-- #endregion Recipe summary section -->
+                        <!-- Recipe information list -->
+                        <ul class="information-text-list flex-wrap row-gap-1 py-1">
+                            <li class="information-text-list-item col-4 lh-2">
+                                <span>Difficoltà: </span>
+                                <b>Facile</b>
+                            </li>
+                            <li class="information-text-list-item col-4 lh-2">
+                                <span>Tempo: </span>
+                                <b>40 min</b>
+                            </li>
+                            <li class="information-text-list-item col-4 lh-2">
+
+                                <span>Porzione per: </span>
+                                <b>8 persone</b>
+                            </li>
+                            <li class="information-text-list-item col-4 lh-2">
+                                <span>Costo: </span>
+                                <b>contenuto</b>
+                            </li>
+                            <li class="information-text-list-item col-4 lh-2">
+                                <b>Note</b>
+                                <span>: +2 ore di riposo in frigo</span>
+                            </li>
+                        </ul>
+
+                    </section>
+                    <!-- #endregion Recipe information text -->
+
+                </div>
+                <!-- #endregion Recipe information section -->
 
                 <!-- Recipe share links bar -->
                 <nav class="recipe-share py-1">
 
                     <!-- Social links list -->
-                    <ul class="social-list d-flex">
+                    <ul class="social-list d-flex flex-wrap justify-content-between gap-1 py-1">
 
                         <!-- Facebook -->
                         <li class="social-item">
-                            <a class="social-link text-decoration-none" href="#">
+                            <a class="social-link" href="#">
                                 <i class="social-icon fa-brands fa-facebook"></i>
                                 <span class="social-name text-uppercase">Facebook</span>
                             </a>
@@ -117,7 +150,7 @@
 
                         <!-- Twitter -->
                         <li class="social-item">
-                            <a class="social-link text-decoration-none" href="#">
+                            <a class="social-link" href="#">
                                 <i class="social-icon fa-brands fa-twitter"></i>
                                 <span class="social-name text-uppercase">Twitter</span>
                             </a>
@@ -125,7 +158,7 @@
 
                         <!-- Instagram -->
                         <li class="social-item">
-                            <a class="social-link text-decoration-none" href="#">
+                            <a class="social-link" href="#">
                                 <i class="social-icon fa-brands fa-instagram"></i>
                                 <span class="social-name text-uppercase">Instagram</span>
                             </a>
@@ -133,7 +166,7 @@
 
                         <!-- Pinterest -->
                         <li class="social-item">
-                            <a class="social-link text-decoration-none" href="#">
+                            <a class="social-link" href="#">
                                 <i class="social-icon fa-brands fa-pinterest"></i>
                                 <span class="social-name text-uppercase">Pinterest</span>
                             </a>
@@ -141,7 +174,7 @@
 
                         <!-- YouTube -->
                         <li class="social-item">
-                            <a class="social-link text-decoration-none" href="#">
+                            <a class="social-link" href="#">
                                 <i class="social-icon fa-brands fa-youtube"></i>
                                 <span class="social-name text-uppercase">YouTube</span>
                             </a>
@@ -155,13 +188,13 @@
             <!-- #endregion Recipe header -->
 
             <!-- #region Advertising banner -->
-            <aside class="advertising-banner">
+            <aside class="advertising-banner py-1">
 
                 <!-- Advertising banner link -->
                 <a class="banner-link" href="#" target="_blank">
 
                     <!-- Advertising banner image -->
-                    <img class="banner-image py-1" src="./img/banner.png" alt="Giallo Booleano cooking classes">
+                    <img class="banner-image" src="./img/banner.png" alt="Giallo Booleano cooking classes">
 
                 </a>
 
@@ -172,33 +205,28 @@
             <section class="recipe-presentation" lang="en">
 
                 <!-- Recipe presentation section title -->
-                <h3 class="presentation-title">Presentation</h3>
+                <h3 class="presentation-title fw-normal text-uppercase fs-2 py-1">Presentation</h3>
 
                 <!-- Separator -->
-                <hr>
+                <hr class="mb-2">
 
                 <!-- Recipe image -->
-                <img class="presentation-image mb-0-5" src="./img/tiramisu.jpg" alt="Tiramisù">
+                <img class="presentation-image my-0-5" src="./img/tiramisu.jpg" alt="Tiramisù">
 
                 <!-- Recipe presentation -->
-                <p class="presentation-text">
+                <p class="presentation-text lh-2 fs-1-2">
                     Back in the day, grandmothers used to prepare a breakfast that we might call humble today, but was
                     considered very rich at the time! Today the recipe is still unchanged, just break a very fresh egg
-                    into
-                    a glass, beat it with sugar, and add coffee or hot milk, for children, or <strong>Marsala
-                        wine</strong>
-                    or aniseed for adults. This marvelous cream gave rise to mascarpone cream used to make
-                    <strong>Tiramisù</strong> (mascarpone cheese and ladyfingers dessert). This is the <strong>best
-                        italian
-                        dessert</strong>, the most popular and beloved of them all, and it has also birthed many other
-                    versions, even an egg-free Tiramisù! There is also a strawberry and Nutella tiramisù! Although the
+                    into a glass, beat it with sugar, and add coffee or hot milk, for children, or
+                    <strong>Marsala wine</strong> or aniseed for adults. This marvelous cream gave rise to mascarpone cream used to make
+                    <strong>Tiramisù</strong> (mascarpone cheese and ladyfingers dessert). This is the 
+                    <strong>best italian dessert</strong>, the most popular and beloved of them all, and it has also birthed many
+                    other versions, even an egg-free Tiramisù! There is also a strawberry and Nutella tiramisù! Although the
                     origins of this famous dessert are unclear, because it is disputed between the regions of Veneto,
                     Friuli-Venezia Giulia, Piedmont, and Tuscany, it remains a cornerstone of italian cusine and it's
-                    widely
-                    prepared from North to South. Unfortunately, we weren't able to find out who invented it, but we can
+                    widely prepared from North to South. Unfortunately, we weren't able to find out who invented it, but we can
                     certainly teach you how to prepare your best tiramisù ever. So here's the recipe: try it and let us
-                    know
-                    what you think!
+                    know what you think!
                 </p>
 
             </section>

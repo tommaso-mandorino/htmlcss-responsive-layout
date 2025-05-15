@@ -5,6 +5,8 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        line-height: 1;
+        overflow-wrap: break-word;
     }
 
     /* Unordered lists */
@@ -12,14 +14,27 @@
         list-style-type: none;
     }
 
+    /* Linka */
+    a {
+        color: inherit;
+    }
+
 /* #endregion Resets */
 
-/* #region Root */
+/* #region Root variables */
 :root {
-    /* Explicit rem declaration */
-    font-size: 16px;
+    /* #region Typography */
+
+        /* Font family */
+        --font-family-base: Montserrat, 'Helvetica Neue', sans-serif;
+
+        /* Font size(rem) */
+        --font-size-base: 16px;
+
+    /* #endregion Typography */
 
     /* #region Colors */
+
     --color-primary: #4e3969;
     --color-primary-lighter: #7c69a4; 
 
@@ -27,23 +42,46 @@
 
     --color-light: #999999;
     --color-lighter: #f6f5f3;
+
     /* #endregion Colors */
 
-    /* #region Variables */
-    --text-align--page-title: center;
-    --display--recipe-specification: none;
-    --display--social-link-name: none;
-    --display--advertising-banner: none;
+    /* #region Layout variables */
 
-    /* Presentation image */
-    --float--presentation-image: none;
-    --width--presentation-image: 70%;
-    --margin-left--presentation-image: auto;
-    --margin-right--presentation-image: auto;
+        /* Container */
+        --max-width--container: 100%;
+        --padding--container: 1rem;
 
-    /* #endregion Variables */
+        /* Page Header */
+        --text-align--page-header: center;
+
+        /* Recipe title */
+        --display--recipe-specification: none;
+        --font-size-recipe-title: 1.5rem;
+
+        /* Recipe information video */
+        --width--information-video: 100%;
+
+        /* Recipe information text */
+        --width--information-text: 100%;
+        --display--information-text-list: block;
+        --width--information-text-list-item: 100%;
+
+        /* Social links */
+        --display--social-link-name: none;
+        --flex-grow--social-item: 0;
+
+        /* Advertising banner */
+        --display--advertising-banner: none;
+
+        /* Presentation image */
+        --float--presentation-image: none;
+        --width--presentation-image: 70%;
+        --margin-left--presentation-image: auto;
+        --margin-right--presentation-image: auto;
+
+    /* #endregion Layout variables */
 }
-/* #endregion Root */
+/* #endregion Root variables */
 
 /* #region Utilities */
 
@@ -51,12 +89,72 @@
 
         /* Containers */
         .container {
-            max-width: 100%;
+            margin: 0 auto;
+            padding: var(--padding--container);
+            max-width: var(--max-width--container);
         }
 
-        /* Display flex */
-        .d-flex {
-            display: flex;
+        /* #region Columns */
+
+            /* Column 3/12 */
+            .col-3 {
+                width: calc(100% / 12 * 3);
+            }
+
+            /* Column 4/12 */
+            .col-4 {
+                width: calc(100% / 12 * 4);
+            }
+
+            /* Column 9/12 */
+            .col-9 {
+                width: calc(100% / 12 * 9);
+            }
+
+            /* Column 12/12 */
+            .col-12 {
+                width: 100%;
+            }
+
+        /* #endregion Columns */
+
+        /* Display inline */
+        .d-inline {
+            display: inline;
+        }
+
+        /* #region Flex */
+
+            /* Display flex */
+            .d-flex {
+                display: flex;
+            }
+
+            /* Flex wrap */
+            .flex-wrap {
+                flex-wrap: wrap;
+            }
+
+            /* Justify content space between */
+            .justify-content-between {
+                justify-content: space-between;
+            }
+
+            /* Gap 1rem */
+            .gap-1 {
+                gap: 1rem;
+            }
+
+            /* Row gap 1rem */
+            .row-gap-1 {
+                row-gap: 1rem;
+            }
+
+        /* #endregion Flex */
+
+        /* Ratio 16 / 9 */
+        .ratio-16x9 {
+            aspect-ratio: 16 / 9;
         }
 
     /* #endregion Layout */
@@ -65,11 +163,22 @@
 
         /* #region Margin */
 
-            /* Margin bottom 0.5rem */
-            .mb-0-5 {
+            /* Margin vertical 0.5rem */
+            .my-0-5 {
+                margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
             }
-            
+
+            /* Margin top 1.5rem */
+            .mt-1-5 {
+                margin-top: 1.5rem;
+            }
+
+            /* Margin bottom 2rem */
+            .mb-2 {
+                margin-bottom: 2rem;
+            }
+
         /* #endregion Margin */
 
         /* #region Padding */
@@ -96,6 +205,11 @@
 
     /* #region Typography */
 
+        /* Font family "Nerko One" */
+        .font-family-nerko-one {
+            font-family: 'Nerko One', cursive;
+        }
+
         /* Text decoration line none */
         .text-decoration-none {
             text-decoration-line: none;
@@ -104,6 +218,36 @@
         /* Text uppercase */
         .text-uppercase {
             text-transform: uppercase;
+        }
+
+        /* Font weight normal */
+        .fw-normal {
+            font-weight: normal;
+        }
+
+        /* Font weight bold */
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        /* Line height 2 */
+        .lh-2 {
+            line-height: 2;
+        }
+
+        /* Font size 1.2rem */
+        .fs-1-2 {
+            font-size: 1.2rem;
+        }
+
+        /* Font size 2rem */
+        .fs-2 {
+            font-size: 2rem;
+        }
+
+        /* Font size 4rem */
+        .fs-4 {
+            font-size: 4rem;
         }
 
     /* #endregion Typography */
@@ -186,79 +330,83 @@
 /* #endregion Utilities */
 
 /* #region Generals */
+
+/* Images */
 img {
     display: block;
     width: 100%;
 }
+
+/* Horizontal rows */
+hr {
+    width: 6rem;
+    border-color: var(--color-seconday);
+}
+
 /* #endregion Generals */
 
 /* #region Page related */
 html {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
     body {
-
-        /* #region Page header */
         .page-header {
+            text-align: var(--text-align--page-header);
             .home-link {
-                .page-title {
-                    text-align: var(--text-align--page-title);
-                    font-family: 'Nerko One', cursive;
-                    font-size: 5rem;
-                }
-            }
-        }
-        /* #endregion Page header */
-
-        /* #region Page main */
-        .page-main {
-            .recipe {
-                .recipe-category {
-
-                }
-                .recipe-title {
-                    .recipe-title-specification {
-                        display: var(--display--recipe-specification);
-                    }
-                }
-                .recipe-header {
-                    .recipe-video {
-                        width: 100%;
-                        height: 25rem;
-                    }
-                    .recipe-share {
-                        .social-list {
-                            .social-item {
-                                .social-link {
-                                    .social-name {
-                                        display: var(--display--social-link-name);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .advertising-banner {
-                    display: var(--display--advertising-banner);
-                }
-                .recipe-presentation {
-                    .presentation-image {
-                        float: var(--float--presentation-image);
-                        width: var(--width--presentation-image);
-                        margin-left: var(--margin-right--presentation-image);
-                        margin-right: var(--margin-right--presentation-image);
-                    }
-                    .presentation-text {
-
+                &:hover {
+                    .page-title {
+                        filter: brightness(150%);
+                        text-shadow: 0px 0px 5px black;
                     }
                 }
             }
         }
-        /* #endregion Page main */
-
-        /* #region Page footer */
-        .page-footer {
-
+        .recipe-title {
+            font-size: var(--font-size-recipe-title);
+            .recipe-title-specification {
+                display: var(--display--recipe-specification);
+            }
         }
-        /* #endregion Page footer */
+        .information-video {
+            width: var(--width--information-video);
+        }
+        .information-text {
+            width: var(--width--information-text);
+            .information-text-list {
+                display: var(--display--information-text-list);
+                .information-text-list-item {
+                    width: var(--width--information-text-list-item);
+                }
+            }
+        }
+        .social-item {
+            flex-grow: var(--flex-grow--social-item);
+            .social-link {
+                box-shadow: 0px 5px 15px -5px var(--color-light);
+                border-radius: 3rem;
+                padding: 1rem 2rem;
+                text-decoration-line: none;
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                background-color: white;
+                .social-name {
+                    display: var(--display--social-link-name);
+                }
+                &:hover {
+                    box-shadow: 0px 5px 15px -5px var(--color-primary);
+                }
+            }
+        }
+        .advertising-banner {
+            display: var(--display--advertising-banner);
+        }
+        .presentation-image {
+            float: var(--float--presentation-image);
+            width: var(--width--presentation-image);
+            margin-left: var(--margin-right--presentation-image);
+            margin-right: var(--margin-right--presentation-image);
+        }
     }
 }
 
@@ -269,14 +417,29 @@ html {
 
     /* Changes */
     :root {
-        --text-align--page-title: left;
+        /* Container */
+        --padding--container: 3rem;
+
+        /* Page Header */
+        --text-align--page-header: left;
+
+        /* Recipe title */
         --display--recipe-specification: inline;
-        --display--social-link-name: inline;
+        --font-size-recipe-title: 2.25rem;
+
+        /* Recipe information text */
+        --display--information-text-list: flex;
+        --width--information-text-list-item: calc(100% / 3);
+
+        /* Social links */
+        --flex-grow--social-item: 1;
+
+        /* Advertising banner */
         --display--advertising-banner: block;
 
         /* Presentation image */
         --float--presentation-image: left;
-        --width--presentation-image: 30%;
+        --width--presentation-image: 40%;
         --margin-left--presentation-image: 0;
         --margin-right--presentation-image: 0.5rem;
     }
@@ -288,7 +451,22 @@ html {
 
     /* Changes */
     :root {
-        
+        /* Container */
+        --max-width--container: 75%;
+
+        /* Recipe title */
+        --font-size-recipe-title: 3.5rem;
+
+        /* Recipe information video */
+        --width--information-video: 70%;
+
+        /* Recipe information text */
+        --width--information-text: 30%;
+        --display--information-text-list: block;
+        --width--information-text-list-item: 100%;
+
+        /* Social links */
+        --display--social-link-name: inline;
     }
 
 }
