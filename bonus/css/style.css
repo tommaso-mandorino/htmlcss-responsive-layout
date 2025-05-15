@@ -440,6 +440,23 @@ html {
 
 /* #region Responsive */
 
+/* Large mobile */
+@media screen and (min-width: 576px) {
+
+    /* Changes */
+    :root {
+        /* Social links */
+        --flex-grow--social-item: 1;
+
+        /* Presentation image */
+        --float--presentation-image: left;
+        --width--presentation-image: 40%;
+        --margin-left--presentation-image: 0;
+        --margin-right--presentation-image: 0.5rem;
+    }
+
+}
+
 /* Tablet */
 @media screen and (min-width: 769px) {
 
@@ -459,17 +476,8 @@ html {
         --display--information-text-list: flex;
         --width--information-text-list-item: calc(100% / 3);
 
-        /* Social links */
-        --flex-grow--social-item: 1;
-
         /* Advertising banner */
         --display--advertising-banner: block;
-
-        /* Presentation image */
-        --float--presentation-image: left;
-        --width--presentation-image: 40%;
-        --margin-left--presentation-image: 0;
-        --margin-right--presentation-image: 0.5rem;
     }
 
 }
