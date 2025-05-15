@@ -397,6 +397,7 @@ html {
                 display: var(--display--information-text-list);
                 .information-text-list-item {
                     width: var(--width--information-text-list-item);
+                    line-height: 3rem;
                 }
             }
         }
@@ -405,7 +406,7 @@ html {
             .social-link {
                 box-shadow: 0px 5px 15px -5px var(--color-light);
                 border-radius: 3rem;
-                padding: 1rem 2rem;
+                padding: 1rem 1.25rem;
                 text-decoration-line: none;
                 display: block;
                 text-align: center;
