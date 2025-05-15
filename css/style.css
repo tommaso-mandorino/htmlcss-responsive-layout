@@ -79,6 +79,11 @@
         --margin-left--presentation-image: auto;
         --margin-right--presentation-image: auto;
 
+        /* Page footer */
+        --display--page-footer: block;
+        --font-size--page-footer: 0.9rem;
+        --text-align--company-information: center;
+
     /* #endregion Layout variables */
 }
 /* #endregion Root variables */
@@ -93,30 +98,6 @@
             padding: var(--padding--container);
             max-width: var(--max-width--container);
         }
-
-        /* #region Columns */
-
-            /* Column 3/12 */
-            .col-3 {
-                width: calc(100% / 12 * 3);
-            }
-
-            /* Column 4/12 */
-            .col-4 {
-                width: calc(100% / 12 * 4);
-            }
-
-            /* Column 9/12 */
-            .col-9 {
-                width: calc(100% / 12 * 9);
-            }
-
-            /* Column 12/12 */
-            .col-12 {
-                width: 100%;
-            }
-
-        /* #endregion Columns */
 
         /* Display inline */
         .d-inline {
@@ -135,9 +116,19 @@
                 flex-wrap: wrap;
             }
 
+            /* Justify content center */
+            .justify-content-center {
+                justify-content: center;
+            }
+        
             /* Justify content space between */
             .justify-content-between {
                 justify-content: space-between;
+            }
+
+            /* Align items center */
+            .align-items-center {
+                align-items: center;
             }
 
             /* Gap 1rem */
@@ -145,9 +136,19 @@
                 gap: 1rem;
             }
 
+            /* Gap 1.5rem */
+            .gap-1-5 {
+                gap: 1.5rem;
+            }
+
             /* Row gap 1rem */
             .row-gap-1 {
                 row-gap: 1rem;
+            }
+
+            /* Column gap 3rem */
+            .column-gap-3 {
+                column-gap: 3rem;
             }
 
         /* #endregion Flex */
@@ -193,6 +194,12 @@
                 padding: 2rem;
             }
 
+            /* Padding horizontal 3rem */
+            .px-3 {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
             /* Padding vertical 1rem */
             .py-1 {
                 padding-top: 1rem;
@@ -218,6 +225,16 @@
         /* Text uppercase */
         .text-uppercase {
             text-transform: uppercase;
+        }
+
+        /* Text align center */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Font style normal */
+        .fst-normal {
+            font-style: normal;
         }
 
         /* Font weight normal */
@@ -319,8 +336,9 @@
                 color: var(--color-light);
             }
 
-            .text-shadow {
-                text-shadow: 2px 2px 2px var(--color-light);
+            /* Text color white */
+            .text-white {
+                color: white;
             }
 
         /* #endregion Text colors */
@@ -353,6 +371,9 @@ html {
         .page-header {
             text-align: var(--text-align--page-header);
             .home-link {
+                .page-title {
+                    text-shadow: 2px 2px 2px var(--color-light);
+                }
                 &:hover {
                     .page-title {
                         filter: brightness(150%);
@@ -406,6 +427,13 @@ html {
             width: var(--width--presentation-image);
             margin-left: var(--margin-right--presentation-image);
             margin-right: var(--margin-right--presentation-image);
+        }
+        .page-footer {
+            display: var(--display--page-footer);
+            font-size: var(--font-size--page-footer);
+            .company-information {
+                text-align: var(--text-align--company-information);
+            }
         }
     }
 }
@@ -467,6 +495,11 @@ html {
 
         /* Social links */
         --display--social-link-name: inline;
+
+        /* Page footer */
+        --display--page-footer: flex;
+        --font-size--page-footer: 1rem;
+        --text-align--company-information: left;
     }
 
 }
